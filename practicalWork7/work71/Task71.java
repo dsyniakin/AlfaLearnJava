@@ -9,9 +9,14 @@ public class Task71 {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите кол-во элементов массива:");
         int size = scan.nextInt();
-        int[] mas = new int[size];
-        mas = createArray(size);
-        System.out.println(Arrays.toString(mas));
+
+        if (size <= 0) {
+            System.out.println("Введен некорректное значение кол-ва элементов массива");;
+        } else {
+            int[] mas = new int[size];
+            mas = createArray(size);
+            System.out.println(Arrays.toString(mas));
+        }
     }
 
     public static int[] createArray(int size) {
